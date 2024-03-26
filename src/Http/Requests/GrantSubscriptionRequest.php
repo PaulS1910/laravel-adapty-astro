@@ -192,6 +192,10 @@ class GrantSubscriptionRequest
             $request['vendor_transaction_id'] = $this->vendorTransactionId;
         }
 
+        if (isset($this->originalVendorTransactionId)) {
+            $request['vendor_original_transaction_id'] = $this->originalVendorTransactionId;
+        }
+
         if (isset($this->store)) {
             $request['store'] = $this->store;
         }
