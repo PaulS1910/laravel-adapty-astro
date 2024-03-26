@@ -22,6 +22,8 @@ class GrantSubscriptionRequest
 
     protected string|null $vendorProductId;
 
+    protected string|null $originalVendorTransactionId;
+
     protected string|null $vendorTransactionId;
 
     protected string|null $store;
@@ -107,6 +109,16 @@ class GrantSubscriptionRequest
     public function setVendorTransactionId(?string $vendorTransactionId): GrantSubscriptionRequest
     {
         $this->vendorTransactionId = $vendorTransactionId;
+        return $this;
+    }
+
+    /**
+     * @param string|null $originalVendorTransactionId
+     * @return GrantSubscriptionRequest
+     */
+    public function setOriginalVendorTransactionId(?string $originalVendorTransactionId): GrantSubscriptionRequest
+    {
+        $this->vendorTransactionId = $originalVendorTransactionId;
         return $this;
     }
 
