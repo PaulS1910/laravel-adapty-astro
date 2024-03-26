@@ -118,7 +118,7 @@ class GrantSubscriptionRequest
      */
     public function setOriginalVendorTransactionId(?string $originalVendorTransactionId): GrantSubscriptionRequest
     {
-        $this->vendorTransactionId = $originalVendorTransactionId;
+        $this->$originalVendorTransactionId = $originalVendorTransactionId;
         return $this;
     }
 
